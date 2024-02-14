@@ -1,1 +1,1 @@
-# MyAutomationFramwork-JavaSelenium-
+# JavaSeleniumFramework
