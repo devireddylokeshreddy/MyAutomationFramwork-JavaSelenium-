@@ -16,6 +16,7 @@ public class ReportManager {
     public static ExtentTest test;
     public static Map<Long, ExtentTest> testMap = new HashMap<>();
     public static String dateStamp;
+    public static String timeStamp;
 
 
 	public static ExtentReports getExtent(){
@@ -26,8 +27,9 @@ public class ReportManager {
 	}
 	public static void startReport() {
         dateStamp = new SimpleDateFormat("dd.MM.yyyy").format(new Date());
+        timeStamp = new SimpleDateFormat("dd.MM.yyyy.HH.mm.ss").format(new Date());
         extent = new ExtentReports();
-        spark = new ExtentSparkReporter(System.getProperty("user.dir") + "/Reports/WebReport_" + dateStamp + ".html");
+        spark = new ExtentSparkReporter(System.getProperty("user.dir") + "/Reports/"+dateStamp+"/WebReport_" + timeStamp + ".html");
         spark.config().setReportName("Web Automation Results");
         spark.config().setDocumentTitle("Test Results");
         spark.config().setTheme(Theme.DARK);

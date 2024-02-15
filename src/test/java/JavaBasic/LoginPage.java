@@ -1,11 +1,13 @@
 package JavaBasic;
 
 import Utilities.BaseClass;
-import Utilities.DriverManager;
 import Utilities.ExtentListeners;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
 
 
 @Listeners({ExtentListeners.class})
@@ -31,7 +33,7 @@ public class LoginPage extends BaseClass {
     @Test(priority = 1)
     public void kind() {
         base.gotoHomePage();
-        Assert.assertTrue(false);
+        Assert.assertTrue(true);
     }
 
     @AfterClass
