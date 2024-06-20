@@ -17,7 +17,7 @@ public class DriverManager {
 		return instance;
 	}
 	public WebDriver getDriver() {
-		WebDriverManager.chromedriver().setup();
+		WebDriverManager.chromedriver().browserVersion("124.0.6367.60").setup();
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
